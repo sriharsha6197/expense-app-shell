@@ -15,7 +15,7 @@ cp expense.conf /etc/nginx/default.d/expense.conf
 
 echo unzipping the downloaded code     
 cd /usr/share/nginx/html 
-unzip /tmp/frontend.zip                  
+unzip /tmp/frontend.zip                 > /tmp/expense.log
 
 echo restarting nginx
 systemctl restart nginx                    > /tmp/expense.log
