@@ -1,5 +1,5 @@
 echo downloading nodejs repo
-curl -sL https://rpm.nodesource.com/setup_lts.x | bash
+curl -sL https://rpm.nodesource.com/setup_lts.x | bash       >> /tmp/expense-backend.log
 
 echo installing nodejs
 dnf install nodejs -y
