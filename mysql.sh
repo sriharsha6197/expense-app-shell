@@ -1,3 +1,5 @@
+source common.sh
+
 echo disabling module of mysql which is already there
 dnf module disable mysql -y                  >> $log_file
 
