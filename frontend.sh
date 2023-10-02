@@ -8,11 +8,10 @@ echo enabling and restarting nginx
 systemctl enable nginx                >> $log_file
 systemctl start nginx                 >> $log_file
 
-rm -rf /usr/share/nginx/html/* 
-
 echo Setting up configuration file
 cp expense.conf /etc/nginx/default.d/expense.conf
 
+rm -rf /usr/share/nginx/html/* 
 cd /usr/share/nginx/html
 
 download and extract
