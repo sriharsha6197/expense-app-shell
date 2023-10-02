@@ -14,7 +14,7 @@ cp expense.conf /etc/nginx/default.d/expense.conf
 rm -rf /usr/share/nginx/html/* 
 cd /usr/share/nginx/html
 
-download and extract
+download_and_extract
 
 echo restarting nginx
 systemctl restart nginx                    >> $log_file

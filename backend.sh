@@ -16,7 +16,7 @@ mkdir /app
 
 cd /app
 
-download and extract
+download_and_extract
 
 echo installing dependencies
 npm install                                                   >> $log_file
