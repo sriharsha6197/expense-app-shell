@@ -12,8 +12,8 @@ cp backend.service /etc/systemd/system/backend.service
 echo adding user
 useradd expense                                              >> $log_file
 rm -rf /app
-mkdir /app
 
+mkdir /app
 cd /app
 
 download_and_extract
