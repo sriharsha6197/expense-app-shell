@@ -1,9 +1,10 @@
 source common.sh
 component=backend
 
-echo downloading nodejs repo
 type npm                                                       &>>$log_file
 if [ $? -ne 0 ]; then
+echo downloading nodejs repo
+
   curl -sL https://rpm.nodesource.com/setup_lts.x | bash       &>>$log_file
   status_check
 
