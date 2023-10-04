@@ -21,7 +21,7 @@ fi
 echo Setting up configuration file
 cp expense.conf /etc/nginx/default.d/expense.conf
 if [ $? -eq 0 ]; then
-   echo -e "\e[32mSUCCESS\e[om"
+   echo -e "\e[32mSUCCESS\e[0m"
 else
    echo -e "\e[31mFAILURE\e[om"
 fi
