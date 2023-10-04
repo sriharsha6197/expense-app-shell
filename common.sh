@@ -4,16 +4,16 @@ download_and_extract() {
 echo download the $component code from s3    
 curl -s -o /tmp/$component.zip https://expense-artifacts.s3.amazonaws.com/frontend.zip   >> $log_file
 if [ $? -eq 0 ]; then
-   echo Success
+   echo -e "\e[31mSUCCESS\e[0m"
 else
-   echo Failure
+   echo -e "\e[32mFAILURE\e[0m"
 fi
 
 echo unzipping the downloaded code     
 unzip /tmp/$component.zip                 >> $log_file
 if [ $? -eq 0 ]; then
-  echo Success
+  echo -e "\e[31mSUCCESS\e[om"
 else
-  echo Failure
+  echo -e "\e[32mFAILURE\e[0m"
 fi
 }
