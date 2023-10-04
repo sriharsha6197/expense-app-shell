@@ -32,7 +32,7 @@ status_check
 
 echo installing dependencies
 npm install                                                   &>>$log_file
-status_check
+
 
 
 echo loading user and enabling and starting $component service
