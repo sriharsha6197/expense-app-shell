@@ -23,7 +23,7 @@ cp expense.conf /etc/nginx/default.d/expense.conf
 if [ $? -eq 0 ]; then
    echo -e "\e[32mSUCCESS\e[0m"
 else
-   echo -e "\e[31mFAILURE\e[om"
+   echo -e "\e[31mFAILURE\e[0m"
 fi
 
 rm -rf /usr/share/nginx/html/* 
@@ -41,5 +41,5 @@ systemctl restart nginx                    >> $log_file
 if [ $? -eq 0 ]; then
   echo -e "\e[32mSUCCESS\e[0m"
 else
-  echo -e "\e[31mFAILURE\e[om"
+  echo -e "\e[31mFAILURE\e[0m"
 fi
