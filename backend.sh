@@ -41,10 +41,13 @@ systemctl enable backend                                      &>> $log_file
 systemctl start backend                                       &>> $log_file
 status_check
 
-echo loading to the database
+echo Install mysql client
 dnf install mysql -y                                         &>> $log_file
 status_check
-mysql -h mysql.sriharsha.shop -uroot -pSriharsha@1 < /app/schema/backend.sql   &>> $log_file
+
+echo load database
+mysql_password=$1
+mysql -h mysql.sriharsha.shop -uroot -p$mysql_password < /app/schema/backend.sql   &>>$log_file
 status_check
 
 
