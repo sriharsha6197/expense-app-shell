@@ -3,7 +3,11 @@ component=frontend
 
 echo Installing nginx
 dnf install nginx -y                  >> $log_file
-echo $?
+if[$? -eq 0]; then
+echo Success
+else
+echo Failure
+fi
 
 echo enabling and restarting nginx
 systemctl enable nginx                >> $log_file
