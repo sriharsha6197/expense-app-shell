@@ -5,11 +5,11 @@ echo downloading nodejs repo
 type npm                                                     &>>$log_file
 if [ $? -ne 0 ]; then
   curl -sL https://rpm.nodesource.com/setup_lts.x | bash       &>>$log_file
-status_check
+  status_check
 
-echo installing nodejs
-dnf install nodejs -y                                        &>>$log_file
-status_check
+  echo installing nodejs
+  dnf install nodejs -y                                        &>>$log_file
+  status_check
 fi
 cp backend.service /etc/systemd/system/backend.service       
 
