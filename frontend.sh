@@ -12,7 +12,11 @@ fi
 echo enabling and restarting nginx
 systemctl enable nginx                >> $log_file
 systemctl start nginx                 >> $log_file
-echo $?
+if [ $? -eq 0]; then
+    echo Success
+else
+    echo Failure
+fi
 
 echo Setting up configuration file
 cp expense.conf /etc/nginx/default.d/expense.conf
