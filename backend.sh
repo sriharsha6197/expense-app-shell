@@ -2,21 +2,22 @@ source common.sh
 component=backend
 
 echo downloading nodejs repo
-curl -sL https://rpm.nodesource.com/setup_lts.x | bash       &>> $log_file
+curl -sL https://rpm.nodesource.com/setup_lts.x | bash       &>>$log_file
 status_check
 
 echo installing nodejs
-dnf install nodejs -y                                        &>> $log_file
+dnf install nodejs -y                                        &>>$log_file
 status_check
 cp backend.service /etc/systemd/system/backend.service       
 
 
 echo adding user
-id expense                                                    &>> $log_file
-if[ $? -ne 0 ]; then
+id expense                                                    &>>$log_file
+if [ $? -ne 0 ]; then
 useradd expense
 fi                                                            &>> $log_file
 status_check
+
 rm -rf /app
 
 mkdir /app
