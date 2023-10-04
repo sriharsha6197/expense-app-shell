@@ -13,7 +13,7 @@ echo enabling and restarting nginx
 systemctl enable nginx                >> $log_file
 systemctl start nginx                 >> $log_file
 if [ $? -eq 0 ]; then
-    echo Success
+    echo -e "\e[31mSUCCESS\e[0m"
 else
     echo Failure
 fi
