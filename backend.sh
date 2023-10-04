@@ -18,7 +18,7 @@ echo adding user
 id expense                                                    &>>$log_file
 if [ $? -ne 0 ]; then
 useradd expense
-fi                                                            &>> $log_file
+fi                                                            &>>$log_file
 status_check
 
 rm -rf /app
@@ -30,7 +30,7 @@ download_and_extract
 status_check
 
 echo installing dependencies
-npm install                                                   &>> $log_file
+npm install                                                   &>>$log_file
 status_check
 
 
