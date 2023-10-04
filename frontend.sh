@@ -3,7 +3,8 @@ component=frontend
 
 echo Installing nginx
 dnf install nginx -y                  >> $log_file
-if[$? -eq 0]; then
+if[$? -eq 0]
+then
 echo Success
 else
 echo Failure
