@@ -12,9 +12,10 @@ cp backend.service /etc/systemd/system/backend.service
 
 
 echo adding user
-id expense
-if[ id -ne expense]; then
-  useradd expense                                             &>> $log_file
+id expense                                                    &>> $log_file
+if[ $? -ne 0 ]; then
+  useradd expense
+fi                                                            &>> $log_file
 status_check
 rm -rf /app
 
