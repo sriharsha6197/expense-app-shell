@@ -1,3 +1,4 @@
+set -x
 source common.sh
 component=backend
 
