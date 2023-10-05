@@ -47,7 +47,7 @@ status_check
 
 echo load database
 mysql_password=$1
-mysql -h mysql.sriharsha.shop -uroot -p$mysql_password < /app/schema/backend.sql &>>$log_file
+mysql -h mysql.sriharsha.shop -uroot -p$mysql_password < /app/schema/backend.sql     &>>$log_file
 status_check
 
 

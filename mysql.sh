@@ -20,6 +20,6 @@ status_check
 
 echo setting up password
 mysql_password=$1
-mysql_secure_installation --set-root-pass $mysql_password  >> $log_file
+mysql_secure_installation --set-root-pass $mysql_password  >>$log_file
 status_check
 
