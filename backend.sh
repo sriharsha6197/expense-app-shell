@@ -39,7 +39,7 @@ npm install                                                   &>>$log_file
 echo loading user and enabling and starting $component service
 systemctl daemon-reload                                       &>> $log_file
 systemctl enable backend                                      &>> $log_file
-systemctl start backend                                       &>> $log_file
+systemctl restart backend                                       &>> $log_file
 status_check
 
 echo Install mysql client
