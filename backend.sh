@@ -13,8 +13,9 @@ echo downloading nodejs repo
   dnf install nodejs -y                                        &>>$log_file
   status_check
 fi
-cp backend.service /etc/systemd/system/backend.service       
 
+cp backend.service /etc/systemd/system/backend.service       
+status_check
 
 echo adding user
 id expense                                                    &>>$log_file
@@ -48,5 +49,5 @@ status_check
 
 echo load schema
 mysql_root_password=$1
-mysql -h mysql.sriharsha.shop -uroot -p$mysql_root_password < /app/schema/backend.sql   &>>$log_file
+mysql -h mysql.sriharsha.shop -uroot -p$mysql_root_password < /app/schema/backend.sql &>>$log_file
 status_check
