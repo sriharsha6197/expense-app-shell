@@ -48,5 +48,5 @@ status_check
 
 echo load schema
 mysql_root_password=$1
-mysql -h mysql.sriharsha.shop -uroot -p$mysql_root_password < /app/schema/backend.sql     &>>$log_file
+mysql -h mysql.sriharsha.shop -uroot -p$mysql_root_password < /app/schema/backend.sql   &>>$log_file
 status_check
